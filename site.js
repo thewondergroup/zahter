@@ -255,13 +255,13 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
   function pageKey(h){h=h.split('#')[0].replace(/^(\.\.?\/)+/,'').replace(/\.html$/,'').replace(/\/$/,'');return h===''?'index':h}
   function grid2(cls,ox,oy,pk){
     var ts=Math.round(Math.max(64,Math.min(120,innerWidth/9))),cols=Math.ceil(innerWidth/ts),rows=Math.ceil(innerHeight/ts),h='',mx=0;
-    for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c*ts+ts/2-ox,r*ts+ts/2-oy)/ts*38);mx=Math.max(mx,d);
+    for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c*ts+ts/2-ox,r*ts+ts/2-oy)/ts*26);mx=Math.max(mx,d);
       h+='<i style="--d:'+d+'ms"><svg><use href="'+zH(pk,(r+c)%5?'b':'r')+'"/></svg></i>';}
     var w=document.createElement('div');w.className='wipe '+cls;w.setAttribute('aria-hidden','true');
     w.innerHTML='<div class="wipe__grid" style="--ts:'+ts+'px;--cols:'+cols+'">'+h+'</div>';document.body.appendChild(w);return {el:w,dur:mx};
   }
   var arrive=null;try{arrive=sessionStorage.getItem('zWipe');sessionStorage.removeItem('zWipe')}catch(e){}
-  if(arrive){
+  if(arrive&&performance.now()<2500){
     var pt=arrive.split(','),g=grid2('out',+pt[0]*innerWidth,+pt[1]*innerHeight,pt[2]);
     document.documentElement.classList.remove('wiping');
     requestAnimationFrame(function(){requestAnimationFrame(function(){g.el.classList.add('go')})});
@@ -277,7 +277,17 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
     var pk=DEST[key]||'star';var g=grid2('in',e.clientX||innerWidth/2,e.clientY||innerHeight/2,pk);
     try{sessionStorage.setItem('zWipe',(1-(e.clientX||0)/innerWidth).toFixed(3)+','+(1-(e.clientY||0)/innerHeight).toFixed(3)+','+pk);sessionStorage.setItem('zIntro','1')}catch(x){}
     requestAnimationFrame(function(){requestAnimationFrame(function(){g.el.classList.add('go')})});
-    setTimeout(function(){location.href=href},Math.min(g.dur+420,1100));
+    var go=function(){location.href=href};
+    // start fetching the next page now so it is in the cache by the time the tiles have covered the screen
+    try{fetch(href.split('#')[0],{credentials:'same-origin'}).then(function(){},function(){})}catch(x){}
+    setTimeout(go,Math.min(g.dur+300,650));
+    // never leave the tiles up: if the browser has not moved on in 4s, drop the overlay
+    setTimeout(function(){g.el.remove();try{sessionStorage.removeItem('zWipe')}catch(x){}},4000);
   });
   addEventListener('pageshow',function(e){if(e.persisted)document.querySelectorAll('.wipe').forEach(function(w){w.remove()})});
+  // warm the cache for the other pages once this one has settled
+  var warm=function(){var seen={};[].slice.call(document.querySelectorAll('.nav a[href],.mm__nav a[href]')).forEach(function(a){var h=a.getAttribute('href').split('#')[0];if(!h||seen[h]||/^(#|[a-z]+:|\/\/)/i.test(h))return;seen[h]=1;
+      var l=document.createElement('link');l.rel='prefetch';l.href=h;l.as='document';document.head.appendChild(l);})};
+  if(navigator.connection&&navigator.connection.saveData)return;
+  addEventListener('load',function(){setTimeout(warm,1500)});
 })();
