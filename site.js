@@ -234,7 +234,8 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
   // 4. Tile page transitions: tiles sweep in from where you click, and flip away on the next page
   document.documentElement.classList.remove('wiping');
   if(rm)return;
-  var DEST={'index.html':'star','menu.html':'t','story.html':'l','private-dining.html':'o','gallery.html':'s','gift-cards.html':'q'};
+  var DEST={'index':'star','menu':'t','story':'l','private-dining':'o','gallery':'s','gift-cards':'q'};
+  function pageKey(h){h=h.split('#')[0].replace(/^(\.\.?\/)+/,'').replace(/\.html$/,'').replace(/\/$/,'');return h===''?'index':h}
   function grid2(cls,ox,oy,pk){
     var ts=Math.round(Math.max(64,Math.min(120,innerWidth/9))),cols=Math.ceil(innerWidth/ts),rows=Math.ceil(innerHeight/ts),h='',mx=0;
     for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c*ts+ts/2-ox,r*ts+ts/2-oy)/ts*38);mx=Math.max(mx,d);
@@ -252,10 +253,11 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
   document.addEventListener('click',function(e){
     if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
     var a=e.target.closest('a[href]');if(!a||a.target==='_blank'||a.hasAttribute('download'))return;
-    var href=a.getAttribute('href');if(!/^[\w-]+\.html(#.*)?$/.test(href))return;
-    var here=location.pathname.split('/').pop()||'index.html';if(href.split('#')[0]===here)return;
+    var href=a.getAttribute('href');if(!href||/^(#|[a-z]+:|\/\/)/i.test(href))return;
+    var key=pageKey(href);if(!(key in DEST))return;
+    var me=document.querySelector('meta[name=zpage]'),here=me?me.content:'';if(key===here||href.split('#')[0]==='./'||href.split('#')[0]==='')return;
     e.preventDefault();
-    var pk=DEST[href.split('#')[0]]||'star';var g=grid2('in',e.clientX||innerWidth/2,e.clientY||innerHeight/2,pk);
+    var pk=DEST[key]||'star';var g=grid2('in',e.clientX||innerWidth/2,e.clientY||innerHeight/2,pk);
     try{sessionStorage.setItem('zWipe',(1-(e.clientX||0)/innerWidth).toFixed(3)+','+(1-(e.clientY||0)/innerHeight).toFixed(3)+','+pk);sessionStorage.setItem('zIntro','1')}catch(x){}
     requestAnimationFrame(function(){requestAnimationFrame(function(){g.el.classList.add('go')})});
     setTimeout(function(){location.href=href},Math.min(g.dur+420,1100));
