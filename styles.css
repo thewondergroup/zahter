@@ -904,3 +904,6 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 .bookbar{padding-bottom:max(env(safe-area-inset-bottom),0px)}
 .mm{padding-bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
 .mm::before{bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
+/* iOS Safari's floating toolbar shows the page underneath fixed bars: extend them down behind it */
+.bookbar::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--red);pointer-events:none}
+.mm::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--blue-deep);pointer-events:none}
