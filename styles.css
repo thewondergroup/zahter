@@ -907,3 +907,35 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 /* iOS Safari's floating toolbar shows the page underneath fixed bars: extend them down behind it */
 .bookbar::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--red);pointer-events:none}
 .mm::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--blue-deep);pointer-events:none}
+/* mobile: no fixed bottom bar (iOS Safari's floating toolbar leaves a gap under it). Book lives in the header instead */
+.hdr__book{display:none}
+@media(max-width:980px){
+  .bookbar{display:none!important}
+  .hdr__book{display:inline-flex;align-items:center;position:absolute;left:clamp(16px,4vw,28px);top:50%;transform:translateY(-50%);font-family:'DM Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--cream);background:var(--red);padding:.7em 1em;box-shadow:inset 0 0 0 1px rgba(243,232,207,.35)}
+  .hdr__book:active{transform:translateY(-50%) scale(.97)}
+}
+/* iPhone notch/status bar: header reaches the very top of the screen */
+:root{--sat:env(safe-area-inset-top,0px)}
+html{background:var(--cream)}
+.hdr{padding-top:var(--sat)}
+.hdr::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:240px;background:inherit;pointer-events:none}
+.hdr:not(.solid)::before{background:#120d09}
+.pagehead{padding-top:calc(78px + var(--sat) + clamp(3.5rem,8vw,6rem))}
+.ph .sb__txt{padding-top:calc(78px + var(--sat) + clamp(2.5rem,6vw,5rem))}
+.mtabs{top:calc(82px + var(--sat))}
+.mm{padding-top:calc(var(--mmf) + var(--sat))}
+.mm::before{top:calc(var(--mmf) + var(--sat))}
+.mm{box-shadow:0 -240px 0 0 var(--cream)}
+@media(max-width:980px){.ph .sb__txt{padding-top:calc(78px + var(--sat) + 2.2rem)}}
+/* arched Iznik tile panel (Story page) */
+.tilepanel{position:relative;margin-top:2.4rem;width:100%;max-width:420px;aspect-ratio:4/4.6;border-radius:50% 50% 0 0/30% 30% 0 0;overflow:hidden;border:7px solid var(--cream);box-shadow:0 0 0 3px var(--gold),0 30px 60px -30px rgba(0,0,0,.6);background:var(--cream)}
+.tp__grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols),var(--ts));grid-auto-rows:var(--ts);justify-content:center;perspective:700px}
+.tp{position:relative;display:block}
+.tp svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .6s ease,transform .8s cubic-bezier(.65,0,.25,1)}
+.tp .r{opacity:0}
+.tp.flip .b{transform:rotateY(180deg)}
+.tp.flip .r{opacity:1;transform:rotateY(180deg)}
+.js .tilepanel .tp{opacity:0;transform:rotateY(90deg) scale(.6);transition:transform .7s cubic-bezier(.2,.9,.25,1),opacity .45s ease;transition-delay:var(--d)}
+.js .tilepanel.in .tp{opacity:1;transform:none}
+@media (max-width:980px){.tilepanel{max-width:260px;margin-inline:auto}}
+@media (prefers-reduced-motion:reduce){.js .tilepanel .tp{opacity:1;transform:none}}

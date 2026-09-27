@@ -109,7 +109,7 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
       id=alias[id]||id; if(!panels.some(function(p){return p.id===id}))id=panels[0].id;
       panels.forEach(function(p){p.classList.toggle('on',p.id===id)});
       tabs.forEach(function(t){var on=t.dataset.tab===id;t.classList.toggle('on',on);t.setAttribute('aria-selected',on);if(on&&t.scrollIntoView&&t.parentNode.scrollWidth>t.parentNode.clientWidth)t.parentNode.scrollTo({left:t.offsetLeft-24,behavior:'smooth'})});
-      if(scroll){var y=document.querySelector('.mpanels').getBoundingClientRect().top+scrollY-82-bar.offsetHeight;if(Math.abs(scrollY-y)>4&&scrollY>y-1||scroll==='force')scrollTo({top:y,behavior:rm?'auto':'smooth'})}
+      if(scroll){var y=document.querySelector('.mpanels').getBoundingClientRect().top+scrollY-document.getElementById('header').offsetHeight-4-bar.offsetHeight;if(Math.abs(scrollY-y)>4&&scrollY>y-1||scroll==='force')scrollTo({top:y,behavior:rm?'auto':'smooth'})}
       panels.forEach(function(p){if(p.id===id)p.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in')})});
     }
     document.addEventListener('click',function(ev){var a=ev.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
@@ -198,6 +198,23 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
     if(io)new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isIntersecting;clearTimeout(timer);if(vis)timer=setTimeout(wave,500)})}).observe(b);
     // nudge the drift once built
     window.dispatchEvent(new Event('scroll'));
+  });
+
+  // 1b. Tile panels: an arched Iznik wall panel made of live tiles
+  [].slice.call(document.querySelectorAll('.tilepanel')).forEach(function(tp){
+    var pk=tp.dataset.p||'star';
+    function build(){var w=tp.clientWidth,ts=Math.max(40,Math.round(w/7)),cols=Math.ceil(w/ts),rows=Math.ceil(tp.clientHeight/ts),h='';
+      for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var red=(r+c)%2===1;
+        h+='<i class="tp" style="--d:'+((r+c)*60)+'ms"><svg class="b"><use href="'+zH(pk,red?'r':'b')+'"/></svg><svg class="r"><use href="'+zH(pk,red?'b':'r')+'"/></svg></i>';}
+      tp.style.setProperty('--ts',ts+'px');tp.style.setProperty('--cols',cols);tp.innerHTML='<div class="tp__grid">'+h+'</div>';}
+    build();var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(build,250)});
+    if(rm)return;
+    tp.addEventListener('pointerover',function(e){var t=e.target.closest('.tp');if(t)t.classList.toggle('flip')});
+    var tmr=null;
+    if(io)new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){tp.classList.add('in');if(!tmr)tmr=setInterval(function(){var ts=tp.querySelectorAll('.tp');if(ts.length)ts[Math.floor(Math.random()*ts.length)].classList.toggle('flip')},650)}
+      else if(tmr){clearInterval(tmr);tmr=null}})},{threshold:.2}).observe(tp);
+    else tp.classList.add('in');
   });
 
   // 2. Mosaic photo reveals: photos arrive under a sheet of tiles that flip away
