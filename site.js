@@ -80,7 +80,7 @@ window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
 
   // ---- sticky mobile book bar
   var bb=document.getElementById('bookbar');
-  if(bb){var bbs=function(){bb.classList.toggle('show',window.scrollY>(hero?innerHeight*0.6:180))};bbs();addEventListener('scroll',bbs,{passive:true});}
+  if(bb){bb.classList.add('show');}
 
   // ---- hover dish photos
   var items=document.querySelectorAll('.mi[data-img]');

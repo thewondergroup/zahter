@@ -905,12 +905,10 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 .mm{padding-bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
 .mm::before{bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
 /* iOS Safari's floating toolbar shows the page underneath fixed bars: extend them down behind it */
-.bookbar::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--red);pointer-events:none}
 .mm::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--blue-deep);pointer-events:none}
 /* mobile: no fixed bottom bar (iOS Safari's floating toolbar leaves a gap under it). Book lives in the header instead */
-.hdr__book{display:none}
+.hdr__book{display:none!important}
 @media(max-width:980px){
-  .bookbar{display:none!important}
   .hdr__book{display:inline-flex;align-items:center;position:absolute;left:clamp(16px,4vw,28px);top:50%;transform:translateY(-50%);font-family:'DM Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--cream);background:var(--red);padding:.7em 1em;box-shadow:inset 0 0 0 1px rgba(243,232,207,.35)}
   .hdr__book:active{transform:translateY(-50%) scale(.97)}
 }
@@ -918,8 +916,6 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 :root{--sat:env(safe-area-inset-top,0px)}
 html{background:var(--cream)}
 .hdr{padding-top:var(--sat)}
-.hdr::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:240px;background:inherit;pointer-events:none}
-.hdr:not(.solid)::before{background:#120d09}
 .pagehead{padding-top:calc(78px + var(--sat) + clamp(3.5rem,8vw,6rem))}
 .ph .sb__txt{padding-top:calc(78px + var(--sat) + clamp(2.5rem,6vw,5rem))}
 .mtabs{top:calc(82px + var(--sat))}
@@ -939,3 +935,12 @@ html{background:var(--cream)}
 .js .tilepanel.in .tp{opacity:1;transform:none}
 @media (max-width:980px){.tilepanel{max-width:260px;margin-inline:auto}}
 @media (prefers-reduced-motion:reduce){.js .tilepanel .tp{opacity:1;transform:none}}
+
+/* iOS Safari 26 extends the colour of solid fixed bars at the top and bottom edges into its
+   see-through status bar and toolbar, so the bars must be solid colours from first paint */
+@media(max-width:980px){
+  .hdr{background-color:#15100c}
+  .hdr.solid{background-color:var(--cream)}
+  .bookbar{display:flex;transform:none!important;background-color:var(--red);border-top:0;box-shadow:0 -3px 0 var(--ink)}
+  body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+}
