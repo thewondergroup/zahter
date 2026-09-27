@@ -939,8 +939,9 @@ html{background:var(--cream)}
 /* iOS Safari 26 extends the colour of solid fixed bars at the top and bottom edges into its
    see-through status bar and toolbar, so the bars must be solid colours from first paint */
 @media(max-width:980px){
-  .hdr{background-color:#15100c}
-  .hdr.solid{background-color:var(--cream)}
-  .bookbar{display:flex;transform:none!important;background-color:var(--red);border-top:0;box-shadow:0 -3px 0 var(--ink)}
-  body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+  /* match how Safari-friendly sites build their bars: plain solid colour, no borders, no transforms, no transitions */
+  .hdr{background-color:#15100c;border-bottom:0;transition:none;padding-top:0;box-shadow:0 1px 0 rgba(243,232,207,.22)}
+  .hdr.solid{background-color:var(--cream);border-bottom:0;box-shadow:0 2px 0 var(--blue),0 4px 0 var(--cream),0 5px 0 var(--blue)}
+  .bookbar{display:flex;transform:none!important;transition:none;background-color:var(--red);border-top:0;padding-bottom:0;box-shadow:0 -2px 6px rgba(0,0,0,.18)}
+  body{padding-bottom:58px}
 }
