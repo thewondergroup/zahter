@@ -188,13 +188,14 @@ section{scroll-margin-top:84px;position:relative}
 .mm-close svg{width:30px;height:30px}
 
 /* HERO — full-bleed video */
-.hero{position:relative;height:100svh;min-height:620px;max-height:1100px;overflow:hidden;color:var(--cream);display:flex;align-items:flex-end;background:#1a120b}
-.hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.14) saturate(1.08) contrast(1.06)}
-.hero__shade{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(12,8,4,.92) 0%,rgba(12,8,4,.55) 34%,rgba(12,8,4,.05) 62%,rgba(12,8,4,.35) 100%),linear-gradient(90deg,rgba(12,8,4,.55),rgba(12,8,4,0) 60%)}
-.hero__in{position:relative;z-index:3;width:100%;padding-bottom:clamp(2.4rem,5vw,4rem)}
+.hero{position:relative;min-height:100svh;overflow:hidden;color:var(--cream);display:flex;align-items:flex-end;background:#12213f}
+.hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) contrast(1.05) brightness(.92)}
+.hero__shade{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(13,26,52,.94) 0%,rgba(16,34,68,.62) 34%,rgba(26,58,107,.28) 62%,rgba(20,42,82,.5) 100%),linear-gradient(90deg,rgba(13,26,52,.6),rgba(13,26,52,0) 60%)}
+.hero__tint{position:absolute;inset:0;z-index:1;background:var(--blue);mix-blend-mode:color;opacity:.3;pointer-events:none}
+.hero__in{position:relative;z-index:3;width:100%;padding-top:calc(78px + clamp(2rem,6vh,4rem));padding-bottom:clamp(2.4rem,5vw,4rem)}
 .hero__kick{color:var(--gold);margin-bottom:1.2rem;display:flex;gap:.8rem;align-items:center}
 .hero__kick::before{content:"";width:34px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(3.4rem,9.6vw,9.4rem);line-height:.9;letter-spacing:-.01em;color:var(--cream);margin:0 0 clamp(1.6rem,3vw,2.4rem);max-width:11ch}
+.hero h1{font-size:clamp(3.4rem,min(9.6vw,15svh),9.4rem);line-height:.9;letter-spacing:-.01em;color:var(--cream);margin:0 0 clamp(1.6rem,3vw,2.4rem);max-width:11ch}
 .hero h1 em{color:var(--gold)}
 .hero__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem 2rem;border-top:1px solid rgba(243,232,207,.25);padding-top:clamp(1.2rem,2.4vw,1.8rem)}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.9rem}
@@ -206,7 +207,7 @@ section{scroll-margin-top:84px;position:relative}
 .stamp svg{width:100%;height:100%;display:block}
 .stamp .ring{transform-origin:100px 100px;animation:spin 22s linear infinite}
 .stamp:hover .ring{animation-duration:6s}
-.stamp .core{fill:var(--red);transition:fill .2s}
+.stamp .core{fill:var(--blue);transition:fill .2s}
 .stamp:hover .core{fill:var(--gold)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .hero__toggle{position:absolute;z-index:4;right:clamp(20px,5vw,72px);bottom:clamp(2.4rem,5vw,4rem);width:40px;height:40px;border-radius:50%;border:1px solid rgba(243,232,207,.55);background:rgba(20,14,8,.35);color:var(--cream);cursor:pointer;display:none;align-items:center;justify-content:center}
@@ -215,7 +216,7 @@ section{scroll-margin-top:84px;position:relative}
 .story .num,.visit .num,.reel .num{color:var(--gold)}
 
 /* marquee */
-.marquee{background:var(--red);color:var(--cream);overflow:hidden;border-block:3px solid var(--ink)}
+.marquee{background:var(--blue-deep);color:var(--cream);overflow:hidden;border-block:3px solid var(--blue)}
 .marquee__track{display:flex;width:max-content;animation:mq 42s linear infinite}
 .marquee span{font-family:'Abril Fatface',serif;font-size:clamp(1.3rem,2.2vw,1.8rem);padding:.7rem 0;white-space:nowrap;letter-spacing:.03em}
 .marquee i{font-style:normal;color:var(--gold);padding:0 1.1rem}
@@ -942,7 +943,7 @@ html{background:var(--cream)}
   /* match how Safari-friendly sites build their bars: plain solid colour, no borders, no transforms, no transitions */
   .hdr{background-color:var(--ink);border-bottom:0;transition:none;padding-top:0;box-shadow:0 1px 0 rgba(243,232,207,.14)}
   /* homepage: see-through over the video until you scroll, as on desktop */
-  body:has(.hero) .hdr:not(.solid){background-color:transparent;background-image:linear-gradient(rgba(20,14,9,.55),rgba(20,14,9,0));box-shadow:none}
+  body:has(.hero) .hdr:not(.solid){background-color:transparent;background-image:linear-gradient(rgba(13,26,52,.6),rgba(13,26,52,0));box-shadow:none}
   .hdr.solid{background-color:var(--cream);border-bottom:0;box-shadow:0 2px 0 var(--blue),0 4px 0 var(--cream),0 5px 0 var(--blue)}
   .bookbar{display:flex;transform:none!important;transition:none;background-color:var(--red);border-top:0;padding-bottom:0;box-shadow:0 -2px 6px rgba(0,0,0,.18)}
   body{padding-bottom:58px}

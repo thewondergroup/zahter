@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://zahter.co.uk/img/hero-wide-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/abril-fatface-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=2609280445">
+<link rel="stylesheet" href="styles.css?v=2609291139">
 <script>try{if(sessionStorage.getItem("zWipe")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("wiping");setTimeout(function(){document.documentElement.classList.remove("wiping")},1500)}}catch(e){}</script>
 <link rel="canonical" href="https://zahter.co.uk/">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -58,7 +58,7 @@
     <a href="https://www.sevenrooms.com/reservations/zahter?venues=zahter" target="_blank" rel="noopener" class="btn btn--red mm__book">Book a table</a>
     <a href="tel:+447775156768" class="btn btn--line mm__call">Call</a>
     <a href="https://www.instagram.com/zahterlondon/" target="_blank" rel="noopener" class="btn btn--line mm__call mm__ig" aria-label="Zahter on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-    <p class="label mm__info">30–32 Foubert's Place, W1F <span class="star">/</span> Mon–Sat 11:30–22:30 <span class="star">/</span> Sun 10:30–19:30</p>
+    <p class="label mm__info">30–32 Foubert's Place, W1F <span class="star">/</span> Mon–Sat 11:30–22:30 <span class="star">/</span> Sun 11:30–21:30</p>
   </div>
   <div class="tiles sm" data-p="q" aria-hidden="true"></div>
 </div>
@@ -67,6 +67,7 @@
   <!-- HERO -->
   <section class="hero" aria-label="Welcome to Zahter">
     <video class="hero__vid" id="heroVid" autoplay muted loop playsinline preload="auto" poster="img/hero-wide-poster.jpg" data-wide="vid/hero-wide.mp4" data-tall="vid/hero-tall.mp4" data-wide-poster="img/hero-wide-poster.jpg" data-tall-poster="img/hero-tall-poster.jpg" aria-label="Fire, food and the dining room at Zahter"></video>
+    <div class="hero__tint" aria-hidden="true"></div>
     <div class="hero__shade" aria-hidden="true"></div>
     <a class="stamp" href="https://www.sevenrooms.com/reservations/zahter?venues=zahter" target="_blank" rel="noopener" aria-label="Book a table">
       <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="stampring" d="M100,100 m0,-78 a78,78 0 1,1 -0.01,0"/></defs>
@@ -84,7 +85,7 @@
           <a href="https://www.sevenrooms.com/reservations/zahter?venues=zahter" target="_blank" rel="noopener" class="btn btn--red">Book a table</a>
           <a href="#menu" class="btn btn--line">See the menu</a>
         </div>
-        <p class="label hero__hours"><span>Mon–Sat 11:30–22:30</span><span class="star">/</span><span>Sun 10:30–19:30</span><span class="star">/</span><span>30–32 Foubert's Place, W1F</span></p>
+        <p class="label hero__hours"><span>Mon–Sat 11:30–22:30</span><span class="star">/</span><span>Sun 11:30–21:30</span><span class="star">/</span><span>30–32 Foubert's Place, W1F</span></p>
       </div>
     </div>
     <button class="hero__toggle" id="heroToggle" aria-label="Pause video"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button>
@@ -261,7 +262,7 @@
         <h2>Find us on Foubert's Place</h2>
         <div class="ticket">
           <div><h4>Address</h4><p>30–32 Foubert's Place, Carnaby<br>London W1F 7PS</p></div>
-          <div><h4>Opening hours</h4><p>Mon–Sat · 11:30–22:30<br>Sun · 10:30–19:30</p></div>
+          <div><h4>Opening hours</h4><p>Mon–Sat · 11:30–22:30<br>Sun · 11:30–21:30</p></div>
           <div><h4>Reservations</h4><p><a href="tel:+447775156768">07775 156 768</a><br><a href="mailto:reservation@zahter.co.uk">reservation@zahter.co.uk</a></p></div>
           <div class="stub"><svg><use href="#seal"/></svg><span class="label">Oxford Circus<br>3 min walk</span></div>
         </div>
@@ -296,7 +297,7 @@
     </div>
     <div>
       <h5 class="label">Visit</h5>
-      <ul><li>30–32 Foubert's Place</li><li>Carnaby, London W1F 7PS</li><li><a href="tel:+447775156768">07775 156 768</a></li><li><a href="mailto:reservation@zahter.co.uk">reservation@zahter.co.uk</a></li><li>Mon–Sat · 11:30–22:30</li><li>Sun · 10:30–19:30</li></ul>
+      <ul><li>30–32 Foubert's Place</li><li>Carnaby, London W1F 7PS</li><li><a href="tel:+447775156768">07775 156 768</a></li><li><a href="mailto:reservation@zahter.co.uk">reservation@zahter.co.uk</a></li><li>Mon–Sat · 11:30–22:30</li><li>Sun · 11:30–21:30</li></ul>
     </div>
     <div class="news">
       <h5 class="label">Join our table</h5>
@@ -316,8 +317,8 @@
 </nav>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"Zahter","founder":{"@type":"Person","name":"Esra Muslu"},"description":"Contemporary Istanbulite (Turkish) cuisine — wood-fired, vegetable-forward cooking in the heart of Carnaby, London.","servesCuisine":["Turkish","Istanbulite","Mediterranean"],"priceRange":"££–£££","telephone":"+44 7775 156768","email":"reservation@zahter.co.uk","url":"https://zahter.co.uk","hasMenu":"https://zahter.co.uk/menu/","acceptsReservations":"https://www.sevenrooms.com/reservations/zahter?venues=zahter","address":{"@type":"PostalAddress","streetAddress":"30–32 Foubert's Place, Carnaby","addressLocality":"London","postalCode":"W1F 7PS","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":51.5134,"longitude":-0.1402},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:30","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:30","closes":"19:30"}]}
+{"@context":"https://schema.org","@type":"Restaurant","name":"Zahter","founder":{"@type":"Person","name":"Esra Muslu"},"description":"Contemporary Istanbulite (Turkish) cuisine — wood-fired, vegetable-forward cooking in the heart of Carnaby, London.","servesCuisine":["Turkish","Istanbulite","Mediterranean"],"priceRange":"££–£££","telephone":"+44 7775 156768","email":"reservation@zahter.co.uk","url":"https://zahter.co.uk","hasMenu":"https://zahter.co.uk/menu/","acceptsReservations":"https://www.sevenrooms.com/reservations/zahter?venues=zahter","address":{"@type":"PostalAddress","streetAddress":"30–32 Foubert's Place, Carnaby","addressLocality":"London","postalCode":"W1F 7PS","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":51.5134,"longitude":-0.1402},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:30","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:30","closes":"21:30"}]}
 </script>
-<script src="site.js?v=2609280445"></script>
+<script src="site.js?v=2609291139"></script>
 </body>
 </html>
