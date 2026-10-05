@@ -112,20 +112,22 @@
 }
 
 :root{
-  --tile:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23285897%22/%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23285897%22/%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22/%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22/%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%232e8189%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23b0301f%22/%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%23d29b2c%22/%3E%3C/svg%3E");
-  --tile-dark:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f3e8cf%22%20stroke-width%3D%221.2%22%20stroke-opacity%3D%220.13%22%3E%3Cpolygon%20points%3D%2232%2C6%2058%2C32%2032%2C58%206%2C32%22/%3E%3Cpolygon%20points%3D%2214%2C14%2050%2C14%2050%2C50%2014%2C50%22/%3E%3Cpolygon%20points%3D%220%2C-26%2026%2C0%200%2C26%20-26%2C0%22/%3E%3Cpolygon%20points%3D%22-18%2C-18%2018%2C-18%2018%2C18%20-18%2C18%22/%3E%3Cpolygon%20points%3D%2264%2C-26%2090%2C0%2064%2C26%2038%2C0%22/%3E%3Cpolygon%20points%3D%2246%2C-18%2082%2C-18%2082%2C18%2046%2C18%22/%3E%3Cpolygon%20points%3D%220%2C38%2026%2C64%200%2C90%20-26%2C64%22/%3E%3Cpolygon%20points%3D%22-18%2C46%2018%2C46%2018%2C82%20-18%2C82%22/%3E%3Cpolygon%20points%3D%2264%2C38%2090%2C64%2064%2C90%2038%2C64%22/%3E%3Cpolygon%20points%3D%2246%2C46%2082%2C46%2082%2C82%2046%2C82%22/%3E%3C/g%3E%3C/svg%3E");
+  --tile:url(img/pattern.svg);
+  --tile-dark:url(img/pattern.svg);
   --cream:#f3e8cf;
   --cream-2:#e9d7b1;
   --paper:#faf3e2;
-  --blue:#285897;
-  --blue-deep:#1a3a6b;
-  --red:#b0301f;
-  --red-deep:#7f2013;
+  --blue:#1f4a9c;
+  --blue-deep:#12305f;
+  --red:#0a2a7a;
+  --red-deep:#061b52;
   --gold:#d29b2c;
-  --teal:#2e8189;
-  --ink:#1e1a15;
-  --ink-soft:#4e4336;
-  --line:rgba(30,26,21,.28);
+  --teal:#3f9ac4;
+  --ink:#0e1b3d;
+  --navy:#0e1b3d;
+  --sky:#65b9d6;
+  --ink-soft:#3a4a73;
+  --line:rgba(14,27,61,.28);
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -144,8 +146,8 @@ section{scroll-margin-top:84px;position:relative}
 .star{color:var(--gold);padding:0 .4em}
 
 /* tile bands */
-.tiles{height:46px;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22/%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22/%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23285897%22/%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23285897%22/%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22/%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22/%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%232e8189%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23b0301f%22/%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%23d29b2c%22/%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%23d29b2c%22/%3E%3C/svg%3E");background-size:46px 46px;border-block:4px solid var(--blue);position:relative;z-index:2}
-.tiles.sm{height:30px;background-size:30px 30px;border-width:3px}
+.tiles{height:46px;background-color:#fff;background-image:url(img/pattern.svg);background-size:92px 159.5px;border-block:4px solid var(--blue);position:relative;z-index:2}
+.tiles.sm{height:30px;background-size:60px 104px;border-width:3px}
 
 /* ornament rule */
 .orn{display:flex;align-items:center;gap:.9rem;justify-content:center;color:var(--gold)}
@@ -188,7 +190,7 @@ section{scroll-margin-top:84px;position:relative}
 .mm-close svg{width:30px;height:30px}
 
 /* HERO — full-bleed video */
-.hero{position:relative;min-height:100svh;overflow:hidden;color:var(--cream);display:flex;align-items:flex-end;background:#111}
+.hero{position:relative;min-height:100svh;overflow:hidden;color:var(--cream);display:flex;align-items:flex-end;background:#0e1b3d}
 .hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero__shade{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.42) 34%,rgba(0,0,0,0) 62%,rgba(0,0,0,.28) 100%),linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,0) 60%)}
 .hero__tint{display:none}
@@ -285,7 +287,7 @@ section{scroll-margin-top:84px;position:relative}
 .film{margin:0}
 .film video{outline:1px solid rgba(243,232,207,.25);outline-offset:6px}
 
-.film video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#1b140d;filter:sepia(.14) contrast(1.04)}
+.film video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#0e1b3d}
 .film figcaption{padding:1.1rem 0 0;color:rgba(243,232,207,.85)}
 
 /* TILE WALL (proverb) */
@@ -293,7 +295,7 @@ section{scroll-margin-top:84px;position:relative}
 .tw-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols,12),var(--ts,80px));grid-auto-rows:var(--ts,80px);justify-content:center;align-content:center;perspective:900px}
 .tw{position:relative;opacity:0;transform:rotateY(92deg) scale(.55);transition:transform .75s cubic-bezier(.2,.9,.25,1),opacity .45s ease;transition-delay:var(--d,0ms)}
 .tilewall.built .tw{opacity:1;transform:none}
-.tw svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .7s ease,transform .9s cubic-bezier(.65,0,.25,1)}
+.tw .b,.tw .r{transition:opacity .7s ease,transform .9s cubic-bezier(.65,0,.25,1)}
 .tw .r{opacity:0}
 .tw.flip .b{transform:rotateY(180deg)}
 .tw.flip .r{opacity:1;transform:rotateY(180deg)}
@@ -318,7 +320,7 @@ section{scroll-margin-top:84px;position:relative}
 .space .label{color:var(--red)}
 .space p{color:var(--ink-soft);margin-bottom:1.1rem;max-width:52ch}
 .invite{position:relative;background:var(--paper);margin-top:2rem;padding:2rem 2rem 1.8rem;box-shadow:0 20px 40px -24px rgba(0,0,0,.45);border:2px solid var(--red)}
-.invite::before{content:"";position:absolute;inset:6px;border:1px solid rgba(176,48,31,.5);pointer-events:none}
+.invite::before{content:"";position:absolute;inset:6px;border:1px solid rgba(31,74,156,.5);pointer-events:none}
 .invite .label{color:var(--red)}
 .invite h3{font-size:2rem;color:var(--blue);margin:.4rem 0 .6rem}
 .invite ul{list-style:none;padding:0;margin:1rem 0 1.5rem;display:grid;gap:.45rem}
@@ -327,7 +329,7 @@ section{scroll-margin-top:84px;position:relative}
 .invite__cta{display:flex;flex-wrap:wrap;gap:.8rem;position:relative;z-index:1}
 
 /* VISIT */
-.visit{background:var(--blue);color:var(--cream);padding-block:clamp(4.5rem,9vw,8rem);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f3e8cf%22%20stroke-width%3D%221.2%22%20stroke-opacity%3D%220.13%22%3E%3Cpolygon%20points%3D%2232%2C6%2058%2C32%2032%2C58%206%2C32%22/%3E%3Cpolygon%20points%3D%2214%2C14%2050%2C14%2050%2C50%2014%2C50%22/%3E%3Cpolygon%20points%3D%220%2C-26%2026%2C0%200%2C26%20-26%2C0%22/%3E%3Cpolygon%20points%3D%22-18%2C-18%2018%2C-18%2018%2C18%20-18%2C18%22/%3E%3Cpolygon%20points%3D%2264%2C-26%2090%2C0%2064%2C26%2038%2C0%22/%3E%3Cpolygon%20points%3D%2246%2C-18%2082%2C-18%2082%2C18%2046%2C18%22/%3E%3Cpolygon%20points%3D%220%2C38%2026%2C64%200%2C90%20-26%2C64%22/%3E%3Cpolygon%20points%3D%22-18%2C46%2018%2C46%2018%2C82%20-18%2C82%22/%3E%3Cpolygon%20points%3D%2264%2C38%2090%2C64%2064%2C90%2038%2C64%22/%3E%3Cpolygon%20points%3D%2246%2C46%2082%2C46%2082%2C82%2046%2C82%22/%3E%3C/g%3E%3C/svg%3E");background-size:64px 64px}
+.visit{background:var(--blue);color:var(--cream);padding-block:clamp(4.5rem,9vw,8rem);}
 .visit__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
 .visit .label{color:var(--gold)}
 .visit h2{font-size:clamp(2.6rem,5.2vw,4.2rem);margin:1rem 0 1.6rem}
@@ -433,7 +435,7 @@ section{scroll-margin-top:84px;position:relative}
 .hoverimg.on{opacity:1;transform:translate(26px,-50%) rotate(-3deg) scale(1)}
 .hoverimg.left{transform:translate(calc(-100% - 26px),-50%) rotate(3deg) scale(.85)}
 .hoverimg.left.on{transform:translate(calc(-100% - 26px),-50%) rotate(3deg) scale(1)}
-.mi[data-img] .mi__n{cursor:zoom-in;text-decoration:underline dotted rgba(176,48,31,.55);text-underline-offset:5px;text-decoration-thickness:2px}
+.mi[data-img] .mi__n{cursor:zoom-in;text-decoration:underline dotted rgba(31,74,156,.55);text-underline-offset:5px;text-decoration-thickness:2px}
 .mi[data-img] .mi__n::after{content:"◉";font-size:.62em;color:var(--red);margin-left:.4em;vertical-align:.25em;opacity:.8}
 
 /* sticky mobile book bar */
@@ -535,7 +537,7 @@ section{scroll-margin-top:84px;position:relative}
 .dietkey b{color:var(--teal)}
 
 /* gift card */
-.giftcard{position:relative;aspect-ratio:1.62;width:100%;max-width:520px;border-radius:16px;background-color:var(--blue);background-image:var(--tile);background-size:44px 44px;box-shadow:0 34px 60px -28px rgba(0,0,0,.6);overflow:hidden;transform:rotate(-3deg);transition:transform .5s cubic-bezier(.2,.9,.25,1)}
+.giftcard{position:relative;aspect-ratio:1.62;width:100%;max-width:520px;border-radius:16px;background-color:#fff;background-image:var(--tile);background-size:88px 152px;box-shadow:0 34px 60px -28px rgba(0,0,0,.6);overflow:hidden;transform:rotate(-3deg);transition:transform .5s cubic-bezier(.2,.9,.25,1)}
 .giftcard:hover{transform:rotate(0) scale(1.02)}
 .giftcard__in{position:absolute;inset:18px;background:var(--blue);border-radius:8px;outline:1px solid rgba(243,232,207,.45);outline-offset:-8px;color:var(--cream);padding:clamp(1.2rem,3vw,1.8rem);display:flex;flex-direction:column;justify-content:space-between}
 .giftcard .logo{height:22px;color:var(--cream)}
@@ -547,7 +549,7 @@ section{scroll-margin-top:84px;position:relative}
 .amounts button.on,.amounts button:hover{background:var(--blue);color:var(--cream)}
 .shopgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem}
 .prod{background:var(--paper);padding:8px 8px 1.2rem;box-shadow:0 14px 28px -18px rgba(0,0,0,.45);display:flex;flex-direction:column}
-.prod .pimg{aspect-ratio:1/1;background-color:var(--cream-2);background-image:var(--tile);background-size:46px 46px;position:relative;overflow:hidden}
+.prod .pimg{aspect-ratio:1/1;background-color:#fff;background-image:var(--tile);background-size:92px 160px;position:relative;overflow:hidden}
 .prod .pimg img{width:100%;height:100%;object-fit:cover}
 .prod .soon{position:absolute;top:10px;left:10px;background:var(--red);color:var(--cream);padding:.35em .7em;font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
 .prod h3{font-size:1.45rem;color:var(--blue);margin:1rem .6rem .3rem}
@@ -576,7 +578,7 @@ section{scroll-margin-top:84px;position:relative}
 /* intro */
 .intro{position:fixed;inset:0;z-index:300;pointer-events:none;overflow:hidden}
 .intro__grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols),var(--ts));grid-auto-rows:var(--ts);justify-content:center;align-content:center}
-.it{position:relative;background-size:100% 100%;will-change:transform,opacity;transition:transform .5s cubic-bezier(.6,0,.35,1),opacity .4s ease;transition-delay:var(--d)}
+.it{position:relative;will-change:transform,opacity;transition:transform .5s cubic-bezier(.6,0,.35,1),opacity .4s ease;transition-delay:var(--d)}
 .it svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .intro.go .it{opacity:0;transform:scaleX(.08) scale(.6)}
 .intro__seal{position:absolute;left:50%;top:50%;width:132px;height:132px;transform:translate(-50%,-50%);color:var(--cream);background:var(--red);border-radius:50%;padding:12px;box-shadow:0 0 0 6px var(--cream),0 20px 50px rgba(0,0,0,.4);transition:opacity .35s ease,transform .45s ease}
@@ -586,7 +588,7 @@ section{scroll-margin-top:84px;position:relative}
 .giftcard .logo svg{max-width:100%}
 .giftcard .logo{width:max-content;max-width:60%}
 .field input,.field select,.field textarea{min-width:0;width:100%}
-.archback{position:absolute;inset:-18px -18px 0 -18px;border-radius:50% 50% 0 0/34% 34% 0 0;background-color:var(--cream);background-image:var(--tile);background-size:38px 38px;border:4px solid var(--blue);z-index:0}
+.archback{position:absolute;inset:-18px -18px 0 -18px;border-radius:50% 50% 0 0/34% 34% 0 0;background-color:var(--cream);background-image:var(--tile);background-size:76px 132px;border:4px solid var(--blue);z-index:0}
 .photoarch figure{box-shadow:0 0 0 3px var(--gold),0 26px 50px -26px rgba(0,0,0,.55)}
 
 /* ================= DESIGN PASS: less, but bigger ================= */
@@ -604,7 +606,7 @@ section{scroll-margin-top:84px;position:relative}
 
 /* split-bleed: image edge-to-edge on one half */
 .sb{display:grid;grid-template-columns:1fr 1fr;min-height:min(90vh,860px);background:var(--cream);position:relative}
-.sb__img{position:relative;overflow:hidden;min-height:440px;background:#2a1d12}
+.sb__img{position:relative;overflow:hidden;min-height:440px;background:#0e1b3d}
 .sb__img img,.sb__img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .sb__txt{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(3rem,7vw,7rem) clamp(1.5rem,6vw,6.5rem)}
 .sb.rev .sb__img{order:2}
@@ -636,7 +638,7 @@ section{scroll-margin-top:84px;position:relative}
 .ph .chips{margin-top:1.8rem}
 
 /* full-bleed photo moment */
-.bleed{position:relative;height:min(84vh,780px);overflow:hidden;background:#1a120b;margin:0}
+.bleed{position:relative;height:min(84vh,780px);overflow:hidden;background:#0e1b3d;margin:0}
 .bleed img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;will-change:transform}
 .bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,8,4,.55),rgba(12,8,4,0) 40%)}
 .bleed figcaption{position:absolute;z-index:1;left:clamp(18px,5vw,64px);bottom:clamp(20px,4vw,44px);color:var(--cream)}
@@ -740,7 +742,7 @@ section{scroll-margin-top:84px;position:relative}
 .mm__call{color:var(--cream)}
 .mm__info{width:100%;margin:.3rem 0 0;font-size:.66rem;color:rgba(243,232,207,.62)}
 .mm__info .star{color:var(--gold)}
-.mm .tiles{flex:none;height:22px;background-size:22px 22px;border-width:2px}
+.mm .tiles{flex:none;height:22px;background-size:44px 76px;border-width:2px}
 @media(min-width:640px){
   .mm__body{grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,4rem)}
   .mm__art{display:block;justify-self:center;width:100%;max-width:340px;max-height:60vh;aspect-ratio:3/4;border-radius:50% 50% 0 0/36% 36% 0 0;overflow:hidden;border:6px solid var(--cream);box-shadow:0 0 0 3px var(--gold);
@@ -778,7 +780,7 @@ section{scroll-margin-top:84px;position:relative}
 .setcard{max-width:760px}
 .sm__prices{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem clamp(1.2rem,4vw,2.6rem);margin-top:-.8rem}
 .sm__price{display:flex;flex-direction:column;align-items:center}
-.sm__price b{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3rem);color:var(--red);line-height:1}
+.sm__price b{font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(1.35rem,2.4vw,1.7rem);color:var(--blue);line-height:1}
 .sm__price i{font-style:normal;font-family:'DM Mono',ui-monospace,monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:.35rem}
 .sm__when{text-align:center;color:var(--blue);margin:1.3rem 0 .4rem}
 .sm__body{text-align:center}
@@ -832,21 +834,21 @@ section{scroll-margin-top:84px;position:relative}
 .tband{display:flex;height:100%;will-change:transform;perspective:600px}
 .tb{flex:none;position:relative;width:var(--ts);height:100%;display:block}
 .tb svg,.mosaic svg,.wipe svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.tb svg{transition:opacity .45s ease,transform .6s cubic-bezier(.65,0,.25,1)}
+.tb .b,.tb .r{transition:opacity .45s ease,transform .6s cubic-bezier(.65,0,.25,1)}
 .tb .r{opacity:0}
 .tb.flip .b{transform:rotateY(180deg)}
 .tb.flip .r{opacity:1;transform:rotateY(180deg)}
 .tb{transition:transform .5s cubic-bezier(.2,.9,.25,1)}
 .tb.flip{transform:scale(1.08);z-index:1}
 .mosaic{position:absolute;inset:0;z-index:4;display:grid;grid-template-columns:repeat(var(--cols),var(--ts));grid-auto-rows:var(--ts);overflow:hidden;pointer-events:none}
-.mosaic i{position:relative;display:block;background-size:100% 100%;transition:transform .55s cubic-bezier(.6,0,.3,1),opacity .4s ease;transition-delay:var(--d)}
+.mosaic i{position:relative;display:block;transition:transform .55s cubic-bezier(.6,0,.3,1),opacity .4s ease;transition-delay:var(--d)}
 .mosaic.go i{transform:scaleX(.08) scale(.6);opacity:0}
 .tw.pop{transform:scale(1.14)!important;z-index:2;transition-delay:0ms!important}
 .tilewall.tappable{cursor:pointer}
 .wipe{position:fixed;inset:0;z-index:400;pointer-events:none;overflow:hidden}
 .wipe.in{pointer-events:auto}
 .wipe__grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols),var(--ts));grid-auto-rows:var(--ts)}
-.wipe i{position:relative;display:block;background-size:100% 100%;will-change:transform,opacity;transition:transform .4s cubic-bezier(.6,0,.35,1),opacity .3s ease;transition-delay:var(--d)}
+.wipe i{position:relative;display:block;will-change:transform,opacity;transition:transform .4s cubic-bezier(.6,0,.35,1),opacity .3s ease;transition-delay:var(--d)}
 .wipe.in i{opacity:0;transform:scaleX(.08) scale(.6)}
 .wipe.in.go i{opacity:1;transform:none}
 .wipe.out i{opacity:1;transform:none}
@@ -862,7 +864,7 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 .tw.turn{transform:rotateY(90deg) scale(.85)!important;transition:transform .23s ease-in!important;transition-delay:0ms!important}
 
 /* expanded menu: coloured Iznik tile frame around a blue panel */
-.mm{--mmf:clamp(28px,5vw,56px);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Cg%20transform%3D%22translate%280%200%29%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%23d29b2c%22%2F%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20stroke%3D%22%231a3a6b%22%20stroke-opacity%3D%22.25%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%2880%200%29%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%232e8189%22%2F%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20stroke%3D%22%231a3a6b%22%20stroke-opacity%3D%22.25%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%280%2080%29%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%232e8189%22%2F%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20stroke%3D%22%231a3a6b%22%20stroke-opacity%3D%22.25%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%2880%2080%29%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%220%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2217%22%20fill%3D%22%23285897%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%2210.5%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2280%22%20r%3D%225%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C40%2040%2C66%2014%2C40%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2222%2C22%2058%2C22%2058%2C58%2022%2C58%22%20fill%3D%22%23285897%22%2F%3E%3Cpolygon%20points%3D%2240%2C25%2055%2C40%2040%2C55%2025%2C40%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2230%2C30%2050%2C30%2050%2C50%2030%2C50%22%20fill%3D%22%23f3e8cf%22%2F%3E%3Cpolygon%20points%3D%2240%2C31%2049%2C40%2040%2C49%2031%2C40%22%20fill%3D%22%232e8189%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpolygon%20points%3D%2240%2C-6%2046%2C0%2040%2C6%2034%2C0%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%220%2C34%206%2C40%200%2C46%20-6%2C40%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2280%2C34%2086%2C40%2080%2C46%2074%2C40%22%20fill%3D%22%23d29b2c%22%2F%3E%3Cpolygon%20points%3D%2240%2C74%2046%2C80%2040%2C86%2034%2C80%22%20fill%3D%22%23d29b2c%22%2F%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22none%22%20stroke%3D%22%231a3a6b%22%20stroke-opacity%3D%22.25%22%20stroke-width%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")!important;background-size:calc(var(--mmf)*2) calc(var(--mmf)*2)!important;background-position:0 0!important}
+.mm{--mmf:clamp(28px,5vw,56px);background-image:url(img/pattern.svg)!important;background-color:#fff;background-size:calc(var(--mmf)*2.3) calc(var(--mmf)*4)!important;background-position:0 0!important}
 .mm__book{flex:1 1 130px}
 .mm::before{content:"";position:absolute;inset:var(--mmf);background:var(--blue);box-shadow:0 0 0 3px var(--gold),0 0 0 7px var(--blue-deep),0 18px 50px rgba(0,0,0,.35);z-index:0;pointer-events:none}
 .mm>*{position:relative;z-index:1}
@@ -893,7 +895,6 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 }
 
 /* tone-on-tone tulip damask for blue sections */
-.damask{background-color:var(--blue);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22240%22%3E%3Cg%20opacity%3D%22.78%22%3E%3Cg%20transform%3D%22translate%2850%2070%29%20scale%281.15%29%22%3E%3Cpath%20d%3D%22M0%2C34%20C0%2C24%200%2C16%200%2C8%22%20stroke%3D%22%232e8189%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M0%2C30%20C-10%2C28%20-17%2C20%20-19%2C10%20C-9%2C12%20-3%2C18%200%2C26Z%20M0%2C30%20C10%2C28%2017%2C20%2019%2C10%20C9%2C12%203%2C18%200%2C26Z%22%20fill%3D%22%232e8189%22%2F%3E%3Cpath%20d%3D%22M-13%2C6%20C-14%2C-8%20-10%2C-17%20-6%2C-20%20L-3%2C-7%20L0%2C-24%20L3%2C-7%20L6%2C-20%20C10%2C-17%2014%2C-8%2013%2C6%20C7%2C13%20-7%2C13%20-13%2C6Z%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpath%20d%3D%22M-7%2C4%20C-7%2C-2%20-4%2C-7%200%2C-9%20C4%2C-7%207%2C-2%207%2C4%20C4%2C7%20-4%2C7%20-7%2C4Z%22%20fill%3D%22%23d29b2c%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28150%20190%29%20scale%281.15%29%22%3E%3Cpath%20d%3D%22M0%2C34%20C0%2C24%200%2C16%200%2C8%22%20stroke%3D%22%232e8189%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M0%2C30%20C-10%2C28%20-17%2C20%20-19%2C10%20C-9%2C12%20-3%2C18%200%2C26Z%20M0%2C30%20C10%2C28%2017%2C20%2019%2C10%20C9%2C12%203%2C18%200%2C26Z%22%20fill%3D%22%232e8189%22%2F%3E%3Cpath%20d%3D%22M-13%2C6%20C-14%2C-8%20-10%2C-17%20-6%2C-20%20L-3%2C-7%20L0%2C-24%20L3%2C-7%20L6%2C-20%20C10%2C-17%2014%2C-8%2013%2C6%20C7%2C13%20-7%2C13%20-13%2C6Z%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpath%20d%3D%22M-7%2C4%20C-7%2C-2%20-4%2C-7%200%2C-9%20C4%2C-7%207%2C-2%207%2C4%20C4%2C7%20-4%2C7%20-7%2C4Z%22%20fill%3D%22%23d29b2c%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28150%20-50%29%20scale%281.15%29%22%3E%3Cpath%20d%3D%22M0%2C34%20C0%2C24%200%2C16%200%2C8%22%20stroke%3D%22%232e8189%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M0%2C30%20C-10%2C28%20-17%2C20%20-19%2C10%20C-9%2C12%20-3%2C18%200%2C26Z%20M0%2C30%20C10%2C28%2017%2C20%2019%2C10%20C9%2C12%203%2C18%200%2C26Z%22%20fill%3D%22%232e8189%22%2F%3E%3Cpath%20d%3D%22M-13%2C6%20C-14%2C-8%20-10%2C-17%20-6%2C-20%20L-3%2C-7%20L0%2C-24%20L3%2C-7%20L6%2C-20%20C10%2C-17%2014%2C-8%2013%2C6%20C7%2C13%20-7%2C13%20-13%2C6Z%22%20fill%3D%22%23b0301f%22%2F%3E%3Cpath%20d%3D%22M-7%2C4%20C-7%2C-2%20-4%2C-7%200%2C-9%20C4%2C-7%207%2C-2%207%2C4%20C4%2C7%20-4%2C7%20-7%2C4Z%22%20fill%3D%22%23d29b2c%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%2270%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%22190%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%22130%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22130%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2210%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22240%22%20r%3D%222.2%22%20fill%3D%22%23d29b2c%22%20fill-opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E");background-size:200px 240px;background-position:center top}
 /* mobile header: logo centred */
 @media(max-width:980px){
   .hdr__in{position:relative;justify-content:flex-end}
@@ -906,7 +907,7 @@ html.wiping body>*:not(.wipe){visibility:hidden}
 .mm{padding-bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
 .mm::before{bottom:calc(var(--mmf) + env(safe-area-inset-bottom))}
 /* iOS Safari's floating toolbar shows the page underneath fixed bars: extend them down behind it */
-.mm::after{content:"";position:absolute;left:0;right:0;top:100%;height:160px;background:var(--blue-deep);pointer-events:none}
+
 /* mobile: no fixed bottom bar (iOS Safari's floating toolbar leaves a gap under it). Book lives in the header instead */
 .hdr__book{display:none!important}
 @media(max-width:980px){
@@ -922,13 +923,13 @@ html{background:var(--cream)}
 .mtabs{top:calc(82px + var(--sat))}
 .mm{padding-top:calc(var(--mmf) + var(--sat))}
 .mm::before{top:calc(var(--mmf) + var(--sat))}
-.mm{box-shadow:0 -240px 0 0 var(--cream)}
+.mm{box-shadow:0 -240px 0 0 #fff}
 @media(max-width:980px){.ph .sb__txt{padding-top:calc(78px + var(--sat) + 2.2rem)}}
 /* arched Iznik tile panel (Story page) */
 .tilepanel{position:relative;margin-top:2.4rem;width:100%;max-width:420px;aspect-ratio:4/4.6;border-radius:50% 50% 0 0/30% 30% 0 0;overflow:hidden;border:7px solid var(--cream);box-shadow:0 0 0 3px var(--gold),0 30px 60px -30px rgba(0,0,0,.6);background:var(--cream)}
 .tp__grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols),var(--ts));grid-auto-rows:var(--ts);justify-content:center;perspective:700px}
 .tp{position:relative;display:block}
-.tp svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .6s ease,transform .8s cubic-bezier(.65,0,.25,1)}
+.tp .b,.tp .r{transition:opacity .6s ease,transform .8s cubic-bezier(.65,0,.25,1)}
 .tp .r{opacity:0}
 .tp.flip .b{transform:rotateY(180deg)}
 .tp.flip .r{opacity:1;transform:rotateY(180deg)}
@@ -970,3 +971,22 @@ html{background:var(--cream)}
 .mm__foot .mm__book{background:var(--red);box-shadow:0 4px 0 var(--red-deep)}
 .btn--red:hover{box-shadow:0 6px 0 var(--blue-deep)}
 .mm__foot .mm__book:hover{box-shadow:0 6px 0 var(--red-deep)}
+
+/* ===== Brand pattern tiles (hex "evil eye" pattern from the brand book) ===== */
+.pz{background-image:url(img/pattern.svg);background-color:#fff;background-repeat:repeat}
+.pz.alt{background-image:url(img/pattern-alt.svg)}
+.tb,.tw,.tp{overflow:hidden}
+.tb .b,.tb .r,.tw .b,.tw .r,.tp .b,.tp .r{position:absolute;inset:0;display:block}
+.tb svg,.tw svg,.tp svg{display:none}
+.tilewall{background:var(--blue-deep)}
+.tw-card{outline-color:var(--blue)}
+
+/* menu page: wood oven + charcoal note */
+.fire-note{display:flex;gap:.9rem;align-items:flex-start;margin-top:1.6rem;padding:1rem 1.1rem;border:1px solid rgba(243,232,207,.35);max-width:560px}
+.fire-note svg{width:28px;height:28px;flex:none;color:var(--gold)}
+.fire-note p{margin:0;font-size:1rem;line-height:1.5;color:rgba(243,232,207,.9)}
+.fire-note b{color:var(--cream)}
+.press__all{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.press__all{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.press__all{grid-template-columns:1fr}}
+.mfoot p b{color:var(--blue);font-style:normal}

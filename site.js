@@ -1,6 +1,5 @@
-window.zH=function(k,v){return '#'+(!k||k==='star'?'tz-'+v:'tz-'+k+'-'+v)};
-window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])return c[id];var sym=document.querySelector(id);if(!sym)return '';var x=new XMLSerializer(),inner='';for(var i=0;i<sym.childNodes.length;i++)inner+=x.serializeToString(sym.childNodes[i]);
-  c[id]="url('data:image/svg+xml;charset=utf-8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">'+inner+'</svg>').replace(/'/g,'%27')+"')";return c[id]}})();
+window.zP=function(c,r,ts,alt){var W=ts*2,H=Math.round(ts*2*448/258.4*100)/100;return 'background-size:'+W+'px '+H+'px;background-position:'+(-c*ts)+'px '+(-r*ts)+'px;'};
+window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></span><span class="r pz alt" style="'+zP(c,r,ts)+'"></span>'};
 (function(){
   document.documentElement.classList.add('js');
   var hd=document.getElementById('header');var hasHero=!!document.querySelector('.hero');var sc=function(){hd.classList.toggle('solid',!hasHero||window.scrollY>window.innerHeight*0.7)};sc();window.addEventListener('scroll',sc,{passive:true});
@@ -26,7 +25,7 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
     var cols=Math.ceil(tw.clientWidth/ts)+1,rows=Math.ceil(tw.clientHeight/ts)+1,cx=(cols-1)/2,cy=(rows-1)/2,out='';
     tg2.style.setProperty('--ts',ts+'px');tg2.style.setProperty('--cols',cols);
     for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=rm?0:Math.round(Math.hypot(c-cx,(r-cy)*1.15)*60);
-      var pk=tg2.dataset.p;out+='<div class="tw" style="--d:'+d+'ms"><svg class="b"><use href="'+zH(pk,'b')+'"/></svg><svg class="r"><use href="'+zH(pk,'r')+'"/></svg></div>';}
+      out+='<div class="tw" style="--d:'+d+'ms">'+zL(c,r,ts)+'</div>';}
     tg2.innerHTML=out;
   }
   if(tw){
@@ -73,7 +72,7 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
     try{sessionStorage.setItem('zIntro','1')}catch(e){}
     var ov=document.createElement('div');ov.className='intro';ov.setAttribute('aria-hidden','true');
     var ts=Math.round(Math.max(64,Math.min(110,innerWidth/7))),cols=Math.ceil(innerWidth/ts)+1,rows=Math.ceil(innerHeight/ts)+1,cx=(cols-1)/2,cy=(rows-1)/2,g='',mx=0;
-    for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c-cx,(r-cy)*1.15)*42);mx=Math.max(mx,d);g+='<div class="it" style="--d:'+d+'ms;background-image:'+zImg('star',(r+c)%5?'b':'r')+'"></div>';}
+    for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c-cx,(r-cy)*1.15)*42);mx=Math.max(mx,d);g+='<div class="it pz" style="--d:'+d+'ms;'+zP(c,r,ts)+'"></div>';}
     ov.innerHTML='<div class="intro__grid" style="--ts:'+ts+'px;--cols:'+cols+'">'+g+'</div><div class="intro__seal"><svg><use href="#seal"/></svg></div>';
     document.body.appendChild(ov);
     setTimeout(function(){ov.classList.add('go')},650);
@@ -178,8 +177,7 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
 /* ===== More tile magic ===== */
 (function(){
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var T=function(k){return '<svg class="b"><use href="'+zH(k,'b')+'"/></svg><svg class="r"><use href="'+zH(k,'r')+'"/></svg>'};
-  var PATS=['q','t','o','l','s'];
+
   var io=('IntersectionObserver' in window);
 
   // 1. Living tile bands: real tiles that flip on hover and ripple along the band
@@ -188,7 +186,7 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
     if(rm)return;
     function build(){
       var ts=b.clientHeight||46;b.dataset.ts=ts;var n=Math.ceil(b.clientWidth/ts)+2,h='';
-      var pk=b.dataset.p||'star';for(var i=0;i<n;i++)h+='<i class="tb" style="--i:'+i+'">'+T(pk)+'</i>';
+      for(var i=0;i<n;i++)h+='<i class="tb" style="--i:'+i+'">'+zL(i,0,ts)+'</i>';
       b.innerHTML='<div class="tband" style="--ts:'+ts+'px">'+h+'</div>';b.classList.add('live');
     }
     build();var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(build,250)});
@@ -204,10 +202,9 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
 
   // 1b. Tile panels: an arched Iznik wall panel made of live tiles
   [].slice.call(document.querySelectorAll('.tilepanel')).forEach(function(tp){
-    var pk=tp.dataset.p||'star';
-    function build(){var w=tp.clientWidth,ts=Math.max(40,Math.round(w/7)),cols=Math.ceil(w/ts),rows=Math.ceil(tp.clientHeight/ts),h='';
-      for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var red=(r+c)%2===1;
-        h+='<i class="tp" style="--d:'+((r+c)*60)+'ms"><svg class="b"><use href="'+zH(pk,red?'r':'b')+'"/></svg><svg class="r"><use href="'+zH(pk,red?'b':'r')+'"/></svg></i>';}
+    function build(){var w=tp.clientWidth,ts=Math.max(40,Math.round(w/6)),cols=Math.ceil(w/ts),rows=Math.ceil(tp.clientHeight/ts),h='';
+      for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){
+        h+='<i class="tp" style="--d:'+((r+c)*60)+'ms">'+zL(c,r,ts)+'</i>';}
       tp.style.setProperty('--ts',ts+'px');tp.style.setProperty('--cols',cols);tp.innerHTML='<div class="tp__grid">'+h+'</div>';}
     build();var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(build,250)});
     if(rm)return;
@@ -224,13 +221,12 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
     var pics=[].slice.call(document.querySelectorAll('.photoarch figure,.sb__img,.tribute__photo,.bleed'));
     var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;mo.unobserve(e.target);var m=e.target.querySelector('.mosaic');if(!m)return;
       requestAnimationFrame(function(){m.classList.add('go')});setTimeout(function(){m.remove()},+m.dataset.dur+900)})},{threshold:.28});
-    var pageOff=(location.pathname.length)%PATS.length;
-    pics.forEach(function(el,pi){var pk=PATS[(pi+pageOff)%PATS.length];
+    pics.forEach(function(el,pi){var alt=pi%2===1;
       var r=el.getBoundingClientRect();if(!r.width||!r.height)return;
       var ts=Math.max(56,Math.min(96,r.width/5)),cols=Math.ceil(r.width/ts),rows=Math.ceil(r.height/ts),h='',mx=0,red=Math.random()<.5;
       var ox=Math.random()<.5?0:cols-1;
       for(var y=0;y<rows;y++)for(var x=0;x<cols;x++){var d=Math.round((Math.abs(x-ox)+y)*55+Math.random()*60);mx=Math.max(mx,d);
-        h+='<i style="--d:'+d+'ms;background-image:'+zImg(pk,((x+y)%4===0)!==red?'r':'b')+'"></i>';}
+        h+='<i class="pz'+(alt?' alt':'')+'" style="--d:'+d+'ms;'+zP(x,y,ts)+'"></i>';}
       var m=document.createElement('div');m.className='mosaic';m.setAttribute('aria-hidden','true');m.dataset.dur=mx;
       m.style.cssText='--cols:'+cols+';--ts:'+ts+'px';m.innerHTML=h;el.appendChild(m);mo.observe(el);
     });
@@ -238,14 +234,11 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
 
   // 3. Tile wall: tap or click to send a ripple of colour across the wall
   var wall=document.getElementById('tilewall'),grid=document.getElementById('twGrid');
-  var WALL=['star','o','t','q','l','s'],wallP=0;
   if(wall&&grid&&!rm){
     wall.addEventListener('click',function(e){if(e.target.closest('.tw-card'))return;
       var ts=[].slice.call(grid.children);if(!ts.length)return;
-      wallP=(wallP+1)%WALL.length;var pk=WALL[wallP];
       ts.forEach(function(t){var r=t.getBoundingClientRect(),dx=r.left+r.width/2-e.clientX,dy=r.top+r.height/2-e.clientY,d=Math.sqrt(dx*dx+dy*dy);
-        setTimeout(function(){t.classList.add('turn');setTimeout(function(){var u=t.querySelectorAll('use');u[0].setAttribute('href',zH(pk,'b'));u[1].setAttribute('href',zH(pk,'r'));t.classList.remove('turn')},230)},d*1.1)});
-      grid.dataset.p=pk;
+        setTimeout(function(){t.classList.add('pop');t.classList.toggle('flip');setTimeout(function(){t.classList.remove('pop')},500)},d*1.1)});
     });
     wall.classList.add('tappable');
   }
@@ -253,12 +246,12 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
   // 4. Tile page transitions: tiles sweep in from where you click, and flip away on the next page
   document.documentElement.classList.remove('wiping');
   if(rm)return;
-  var DEST={'index':'star','menu':'t','story':'l','private-dining':'o','gallery':'s','gift-cards':'q'};
+  var DEST={'index':1,'menu':1,'story':1,'private-dining':1,'gallery':1,'gift-cards':1,'press':1,'careers':1};
   function pageKey(h){h=h.split('#')[0].replace(/^(\.\.?\/)+/,'').replace(/\.html$/,'').replace(/\/$/,'');return h===''?'index':h}
   function grid2(cls,ox,oy,pk){
     var ts=Math.round(Math.max(72,Math.min(130,innerWidth/6))),cols=Math.ceil(innerWidth/ts),rows=Math.ceil(innerHeight/ts),h='',mx=0;
     for(var r=0;r<rows;r++)for(var c=0;c<cols;c++){var d=Math.round(Math.hypot(c*ts+ts/2-ox,r*ts+ts/2-oy)/ts*30);mx=Math.max(mx,d);
-      h+='<i style="--d:'+d+'ms;background-image:'+zImg(pk,(r+c)%5?'b':'r')+'"></i>';}
+      h+='<i class="pz" style="--d:'+d+'ms;'+zP(c,r,ts)+'"></i>';}
     var w=document.createElement('div');w.className='wipe '+cls;w.setAttribute('aria-hidden','true');
     w.innerHTML='<div class="wipe__grid" style="--ts:'+ts+'px;--cols:'+cols+'">'+h+'</div>';document.body.appendChild(w);return {el:w,dur:mx};
   }
@@ -276,7 +269,7 @@ window.zImg=(function(){var c={};return function(k,v){var id=zH(k,v);if(c[id])re
     var key=pageKey(href);if(!(key in DEST))return;
     var me=document.querySelector('meta[name=zpage]'),here=me?me.content:'';if(key===here||href.split('#')[0]==='./'||href.split('#')[0]==='')return;
     e.preventDefault();
-    var pk=DEST[key]||'star';var g=grid2('in',e.clientX||innerWidth/2,e.clientY||innerHeight/2,pk);
+    var pk='p';var g=grid2('in',e.clientX||innerWidth/2,e.clientY||innerHeight/2,pk);
     try{sessionStorage.setItem('zWipe',(1-(e.clientX||0)/innerWidth).toFixed(3)+','+(1-(e.clientY||0)/innerHeight).toFixed(3)+','+pk);sessionStorage.setItem('zIntro','1')}catch(x){}
     requestAnimationFrame(function(){requestAnimationFrame(function(){g.el.classList.add('go')})});
     var go=function(){location.href=href};
