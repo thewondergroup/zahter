@@ -990,3 +990,7 @@ html{background:var(--cream)}
 @media(max-width:900px){.press__all{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.press__all{grid-template-columns:1fr}}
 .mfoot p b{color:var(--blue);font-style:normal}
+
+.path-arch{margin-top:2.4rem;max-width:400px;margin-inline:0}
+.path-arch figcaption{color:var(--gold);margin-top:1rem;text-align:center}
+@media(max-width:980px){.path-arch{max-width:300px;margin-inline:auto}}
