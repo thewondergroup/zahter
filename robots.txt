@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zahter.co.uk/sitemap.xml

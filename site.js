@@ -246,7 +246,7 @@ window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></s
   // 4. Tile page transitions: tiles sweep in from where you click, and flip away on the next page
   document.documentElement.classList.remove('wiping');
   if(rm)return;
-  var DEST={'index':1,'menu':1,'story':1,'private-dining':1,'gallery':1,'gift-cards':1,'press':1,'careers':1};
+  var DEST={'index':1,'menu':1,'story':1,'private-dining':1,'gallery':1,'gift-cards':1,'press':1,'careers':1,'privacy':1,'cookies':1};
   function pageKey(h){h=h.split('#')[0].replace(/^(\.\.?\/)+/,'').replace(/\.html$/,'').replace(/\/$/,'');return h===''?'index':h}
   function grid2(cls,ox,oy,pk){
     var ts=Math.round(Math.max(72,Math.min(130,innerWidth/6))),cols=Math.ceil(innerWidth/ts),rows=Math.ceil(innerHeight/ts),h='',mx=0;
