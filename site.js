@@ -286,3 +286,17 @@ window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></s
   if(navigator.connection&&navigator.connection.saveData)return;
   addEventListener('load',function(){setTimeout(warm,1500)});
 })();
+
+/* ---- delivery chooser */
+(function(){
+  var m=document.getElementById('dlv');if(!m)return;
+  var last=null;
+  function open(e){if(e)e.preventDefault();last=document.activeElement;m.hidden=false;document.body.style.overflow='hidden';setTimeout(function(){var f=m.querySelector('.dlv__opt');if(f)f.focus()},30);
+    try{window.dataLayer=window.dataLayer||[];dataLayer.push({event:'delivery_open'})}catch(x){}}
+  function close(){m.hidden=true;document.body.style.overflow='';if(last&&last.focus)last.focus()}
+  [].slice.call(document.querySelectorAll('.js-dlv')).forEach(function(b){b.addEventListener('click',open)});
+  document.getElementById('dlvClose').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()});
+  [].slice.call(m.querySelectorAll('.dlv__opt')).forEach(function(a){a.addEventListener('click',function(){try{dataLayer.push({event:'delivery_click',platform:a.dataset.platform})}catch(x){}})});
+})();
