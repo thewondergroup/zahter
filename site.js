@@ -1,5 +1,5 @@
 /* Zahter forms endpoint (Google Apps Script web app URL) — see brochure-setup/SETUP.md. Leave empty to fall back to email links. */
-window.ZAHTER_FORMS_ENDPOINT='';
+window.ZAHTER_FORMS_ENDPOINT='https://script.google.com/macros/s/AKfycbzzrp7uJuyCYdXzs4W8VtIcdeI7n0p4HKyCvrZxD0LVmwy2r8IhGMDxgpPVIKsjJISFOA/exec';
 window.zP=function(c,r,ts,alt){var W=ts*2,H=Math.round(ts*2*448/258.4*100)/100;return 'background-size:'+W+'px '+H+'px;background-position:'+(-c*ts)+'px '+(-r*ts)+'px;'};
 window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></span><span class="r pz alt" style="'+zP(c,r,ts)+'"></span>'};
 (function(){
