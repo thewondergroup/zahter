@@ -1,3 +1,5 @@
+/* Zahter forms endpoint (Google Apps Script web app URL) — see brochure-setup/SETUP.md. Leave empty to fall back to email links. */
+window.ZAHTER_FORMS_ENDPOINT='';
 window.zP=function(c,r,ts,alt){var W=ts*2,H=Math.round(ts*2*448/258.4*100)/100;return 'background-size:'+W+'px '+H+'px;background-position:'+(-c*ts)+'px '+(-r*ts)+'px;'};
 window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></span><span class="r pz alt" style="'+zP(c,r,ts)+'"></span>'};
 (function(){
@@ -63,7 +65,7 @@ window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></s
 (function(){
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var MAIL='reservation@zahter.co.uk';
-  function mailto(subject,lines){location.href='mailto:'+MAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));}
+  function mailto(subject,lines,cc){location.href='mailto:'+MAIL+'?'+(cc?'cc='+encodeURIComponent(cc)+'&':'')+'subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));}
 
   // ---- tile intro (homepage, once per visit)
   var hero=document.querySelector('.hero'),seen=false;
@@ -143,8 +145,28 @@ window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></s
 
   // ---- private dining enquiry
   var pd=document.getElementById('pdForm');
-  if(pd)pd.addEventListener('submit',function(e){e.preventDefault();var f=pd.elements;
-    mailto('Private dining enquiry — '+(f.date.value||'date TBC'),['Name: '+f.name.value,'Email: '+f.email.value,'Phone: '+f.phone.value,'Date: '+f.date.value,'Guests: '+f.guests.value,'Occasion: '+f.occasion.value,'Time of day: '+f.slot.value,'','Notes:',f.notes.value]);});
+  if(pd)pd.addEventListener('submit',function(e){
+    e.preventDefault();var f=pd.elements;
+    if(f.company&&f.company.value)return; // honeypot
+    var subject='Private dining enquiry — '+(f.date.value||'date TBC');
+    var lines=['Name: '+f.name.value,'Email: '+f.email.value,'Phone: '+f.phone.value,'Date: '+f.date.value,'Guests: '+f.guests.value,'Occasion: '+f.occasion.value,'Time of day: '+f.slot.value,'','Notes:',f.notes.value];
+    var cc='charles@thewonder.group';
+    var ep=(window.ZAHTER_FORMS_ENDPOINT||'');
+    var btn=document.getElementById('pdSubmit'),err=pd.querySelector('.pd__err'),done=document.getElementById('pdDone');
+    var m1=document.getElementById('pdMailto'),m2=document.getElementById('pdMailto2');
+    var murl='mailto:'+MAIL+'?cc='+encodeURIComponent(cc)+'&subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+    if(m1)m1.href=murl;if(m2)m2.href=murl;
+    if(ep.indexOf('http')!==0){location.href=murl;return;} // no endpoint configured yet: fall back to email
+    btn.disabled=true;btn.textContent='Sending…';err.hidden=true;
+    var body=new URLSearchParams({type:'private_dining',name:f.name.value,email:f.email.value,phone:f.phone.value,date:f.date.value,guests:f.guests.value,slot:f.slot.value,occasion:f.occasion.value,notes:f.notes.value,page:location.pathname});
+    var finished=false;
+    function ok(){if(finished)return;finished=true;pd.style.display='none';done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'});
+      window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'private_dining_enquiry',guests:f.guests.value,slot:f.slot.value});
+      if(window.__pdBroch)document.querySelectorAll('#pdDone .js-broch').forEach(function(b){b.addEventListener('click',window.__pdBroch)});}
+    function fail(){if(finished)return;finished=true;btn.disabled=false;btn.textContent='Send enquiry';err.hidden=false;}
+    var t=setTimeout(fail,8000);
+    fetch(ep,{method:'POST',mode:'no-cors',body:body}).then(function(){clearTimeout(t);ok()}).catch(function(){clearTimeout(t);fail()});
+  });
 
   // ---- gift cards
   var gA=document.getElementById('giftAmt'),gC=document.getElementById('giftCustom'),amt='£100';
@@ -299,4 +321,36 @@ window.zL=function(c,r,ts){return '<span class="b pz" style="'+zP(c,r,ts)+'"></s
   m.addEventListener('click',function(e){if(e.target===m)close()});
   addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()});
   [].slice.call(m.querySelectorAll('.dlv__opt')).forEach(function(a){a.addEventListener('click',function(){try{dataLayer.push({event:'delivery_click',platform:a.dataset.platform})}catch(x){}})});
+})();
+
+/* ---- events brochure (gated download) */
+(function(){
+  var BROCHURE_ENDPOINT=window.ZAHTER_FORMS_ENDPOINT||''; // set at the top of this file
+  var BROCHURE_PDF='/docs/zahter-private-dining-events.pdf';
+  var m=document.getElementById('broch');if(!m)return;
+  var form=document.getElementById('brochForm'),btn=document.getElementById('brochSubmit'),err=m.querySelector('.broch__err'),link=document.getElementById('brochLink');
+  function step(n){m.querySelectorAll('.broch__step').forEach(function(s){s.hidden=s.dataset.step!==n})}
+  function open(e){if(e)e.preventDefault();step('form');m.hidden=false;document.body.style.overflow='hidden';setTimeout(function(){var i=form.querySelector('input');if(i)i.focus()},50);
+    window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'brochure_open'});}
+  function close(){m.hidden=true;document.body.style.overflow='';}
+  document.querySelectorAll('.js-broch').forEach(function(b){b.addEventListener('click',open)});window.__pdBroch=open;
+  document.getElementById('brochClose').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close()});
+  if(location.hash==='#brochure')setTimeout(open,400);
+  form.addEventListener('submit',function(e){
+    e.preventDefault();var f=form.elements;
+    var ok=f.name.value.trim().length>1&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())&&f.phone.value.replace(/\D/g,'').length>=9;
+    err.hidden=ok;if(!ok)return;
+    if(f.company.value)return; // honeypot
+    btn.disabled=true;btn.textContent='One moment…';
+    var body=new URLSearchParams({type:'brochure',name:f.name.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),page:location.pathname,source:'website'});
+    var pdf=new URL(BROCHURE_PDF,location.origin).href;link.href=pdf;
+    var w=window.open('',''); // open synchronously so popup blockers allow it
+    function finish(){step('done');if(w){w.location=pdf}else{link.click()}btn.disabled=false;btn.textContent='Download the brochure';
+      window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'brochure_download'});form.reset();}
+    if(BROCHURE_ENDPOINT.indexOf('http')!==0){finish();return;}
+    var done=false,t=setTimeout(function(){if(!done){done=true;finish()}},4000);
+    fetch(BROCHURE_ENDPOINT,{method:'POST',mode:'no-cors',body:body}).then(function(){if(!done){done=true;clearTimeout(t);finish()}}).catch(function(){if(!done){done=true;clearTimeout(t);finish()}});
+  });
 })();

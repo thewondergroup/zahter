@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="geo.placename" content="Carnaby, London">
 <meta name="geo.position" content="51.5134;-0.1402">
 <link rel="preload" href="../fonts/abril-fatface-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../styles.css?v=2611021857">
+<link rel="stylesheet" href="../styles.css?v=2611201140">
 <script>try{if(sessionStorage.getItem("zWipe")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("wiping");setTimeout(function(){document.documentElement.classList.remove("wiping")},1500)}}catch(e){}</script>
 <link rel="canonical" href="https://zahter.co.uk/private-dining/">
 <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="label"><span class="num">04</span><span lang="tr">Özel Oda</span><span class="star">/</span>Private Dining</p>
       <h1>The <em>Loft</em></h1>
       <p class="lede">Our private room on the second floor, above Foubert's Place — for birthdays, long lunches, team dinners and celebrations of every size.</p>
-      <div class="chips"><a class="chip" href="#enquire">Enquire</a><a class="chip" href="#menus">Menus</a></div>
+      <div class="chips"><a class="chip" href="#enquire">Enquire</a><a class="chip" href="#menus">Menus</a><a class="chip js-broch" href="#brochure">Download brochure</a></div>
     </div>
     <div class="sb__img"><img width="1400" height="933" src="../img/loft-a.jpg" alt="The Loft at Zahter, with blue banquettes and arched windows"><span class="sb__cap">Second floor</span></div>
   </section>
@@ -129,11 +129,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Engagements &amp; wedding parties</li>
           <li>Supper clubs &amp; launches</li>
         </ul>
-        <div class="invite__cta"><a href="#enquire" class="btn btn--red">Start an enquiry</a></div>
+        <div class="invite__cta"><a href="#enquire" class="btn btn--red">Start an enquiry</a> <a href="#brochure" class="btn btn--ghost js-broch">Download the brochure</a></div>
       </div>
     </div>
   </section>
   <div class="tiles" data-p="o" aria-hidden="true"></div>
+
+  <section class="section broch" id="brochure">
+    <div class="broch__in">
+      <div class="broch__pic"><img width="900" height="1350" src="../img/baklava.jpg" alt="" loading="lazy"></div>
+      <div class="broch__txt">
+        <p class="label">Broşür / Events brochure</p>
+        <h2>Everything in <em>one place</em></h2>
+        <p>Our private dining &amp; events brochure covers both spaces, both sharing menus and how booking works — ready to forward to whoever you're planning with.</p>
+        <button class="btn btn--red js-broch" type="button">Download the brochure</button>
+        <p class="formnote">PDF · 8 pages · 2&nbsp;MB</p>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="enquire">
     <div class="wrap split">
@@ -148,13 +161,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
         <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
         <div class="field"><label for="f-date">Date</label><input id="f-date" name="date" type="date"></div>
-        <div class="field"><label for="f-guests">Guests</label><input id="f-guests" name="guests" type="number" min="2" max="30" placeholder="e.g. 18"></div>
+        <div class="field"><label for="f-guests">Guests</label><input id="f-guests" name="guests" type="number" min="2" max="40" placeholder="e.g. 18"></div>
         <div class="field"><label for="f-slot">Time of day</label><select id="f-slot" name="slot"><option>Dinner</option><option>Lunch</option><option>Drinks &amp; canapés</option></select></div>
         <div class="field full"><label for="f-occ">Occasion</label><input id="f-occ" name="occasion" placeholder="Birthday, team dinner, engagement…"></div>
         <div class="field full"><label for="f-notes">Anything else?</label><textarea id="f-notes" name="notes" placeholder="Dietary needs, drinks, timings…"></textarea></div>
-        <div class="field full"><button class="btn btn--red" type="submit" style="justify-self:start">Send enquiry</button>
-          <p class="formnote">This opens an email to our events team with your details filled in. You can also enquire through <a href="https://www.tagvenue.com/pro/form/4193/zahter?utm_source=website&utm_medium=internal" target="_blank" rel="noopener">our event request form</a>.</p></div>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="field full"><button class="btn btn--red" type="submit" id="pdSubmit" style="justify-self:start">Send enquiry</button>
+          <p class="formnote">Our events team will come back to you within a day or two. Prefer to talk? Call <a href="tel:+447775156768">07775 156 768</a>, email <a id="pdMailto" href="mailto:reservation@zahter.co.uk?subject=Private%20dining%20enquiry">reservation@zahter.co.uk</a> or use <a href="https://www.tagvenue.com/pro/form/4193/zahter?utm_source=website&utm_medium=internal" target="_blank" rel="noopener">our event request form</a>.</p>
+          <p class="formnote pd__err" hidden>Something went wrong sending that. Please <a id="pdMailto2" href="mailto:reservation@zahter.co.uk?subject=Private%20dining%20enquiry">email us directly</a> and we'll pick it up.</p>
+        </div>
       </form>
+      <div class="pd__done" id="pdDone" hidden>
+        <p class="label">Teşekkürler · Thank you</p>
+        <h3>We've got your <em>enquiry</em></h3>
+        <p>Our events team will be in touch shortly with availability, menus and a proposal. In the meantime, <a href="#brochure" class="js-broch">download the events brochure</a>.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -209,6 +230,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
-<script src="../site.js?v=2611021857"></script>
+<div class="dlv broch-modal" id="broch" role="dialog" aria-modal="true" aria-labelledby="brochTitle" hidden>
+  <div class="dlv__card">
+    <button class="dlv__x" id="brochClose" aria-label="Close">✕</button>
+    <div class="broch__step" data-step="form">
+      <p class="label">Events brochure</p>
+      <h3 id="brochTitle">Get the <em>brochure</em></h3>
+      <p>Leave your details and the PDF will open straight away. Our events team may follow up to help with your plans.</p>
+      <form class="form" id="brochForm" novalidate>
+        <div class="field full"><label for="b-name">Name</label><input id="b-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="b-email">Email</label><input id="b-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="field full"><button class="btn btn--red" type="submit" id="brochSubmit">Download the brochure</button>
+          <p class="formnote">By downloading you agree to Zahter contacting you about private dining. See our <a href="../privacy/">privacy notice</a>.</p>
+          <p class="formnote broch__err" hidden>Please check your name, email and phone number.</p>
+        </div>
+      </form>
+    </div>
+    <div class="broch__step" data-step="done" hidden>
+      <p class="label">Teşekkürler · Thank you</p>
+      <h3>Your brochure is <em>ready</em></h3>
+      <p>It should have opened in a new tab. If not, use the button below.</p>
+      <a class="btn btn--red" id="brochLink" href="../docs/zahter-private-dining-events.pdf" target="_blank" rel="noopener">Open the brochure</a>
+    </div>
+  </div>
+</div>
+<script src="../site.js?v=2611201140"></script>
 </body>
 </html>
